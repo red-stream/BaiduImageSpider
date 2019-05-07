@@ -2,8 +2,6 @@
 
 <hr>
 
-[TOC]
-
 
 
 ## 1. 运行环境： 
@@ -85,9 +83,26 @@ Catched 000019.jpg < http://imgsrc.baidu.com/forum/w=580/sign=bbe25aeed258ccbf1b
 
 ```
 
-![exampe one](https://raw.githubusercontent.com/red-stream/ImageSpider/master/images/exampe_1.png)
+![exampe one](https://raw.githubusercontent.com/red-stream/ImageSpider/master/res/exampe_1.png)
 
-![exampe two](https://raw.githubusercontent.com/red-stream/ImageSpider/master/images/exampe_2.png)
+![exampe two](https://raw.githubusercontent.com/red-stream/ImageSpider/master/res/exampe_2.png)
+
+## 4. 脚本
+
+- merge.py —— 用于合并 image 下的图片数据集
 
 
-## 4. 欢迎反馈使用过程中的问题与BUG
+
+## 5. 功能更新记录
+
+> 1. 多个任务批处理
+> 2. 监督下载（下载时可以浏览图片到底是否需要） 
+> 3. 文件名称自动生成前缀序号 ok
+> 4. 合并图片集 ok
+> 5. 监督合并 
+> 6. 优化输出日志，显示进度条
+> 7. 统计下载成功率，统计失败数据（错误类型、站点类型）
+
+<hr> <strong>欢迎反馈使用过程中的问题与BUG</strong>
+
+## 

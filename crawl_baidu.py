@@ -15,6 +15,7 @@ import time
 import string
 import config as cfg
 
+DEFAULT_IMAGE_DIR = "./images"
 DEFAULT_IMAGE_SUFFIX = ".jpg"
 
 class Crawler:
@@ -32,8 +33,12 @@ class Crawler:
         print ("\n-  ------ IMAGE SPIDER SETUP ------  -\n")
         socket.setdefaulttimeout(cfg.CRAWL_TIMEOUT)
 
+        if not os.path.isdir(DEFAULT_IMAGE_DIR):
+            os.mkdir(DEFAULT_IMAGE_DIR)
+
         if cfg.CRAWL_SAVE_DIR == "auto":
-            self.__image_dir = self.__image_dir + cfg.CRAWL_KEYWORD
+            serial_number = ("%03d" % len(os.listdir(self.__image_dir)))
+            self.__image_dir = self.__image_dir + serial_number + str("_") + cfg.CRAWL_KEYWORD
         else:
             self.__image_dir = self.__image_dir + cfg.CRAWL_SAVE_DIR
 
